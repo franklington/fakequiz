@@ -1,0 +1,17 @@
+<div class="row  vh-100 justify-content-center">
+  <div class="col-md-6 align-self-center ">
+    <h1 class="">Gib bitte deinen Namen ein</h1>
+    <div class="form-group mt-5">
+      <label for="usr">Name:</label>
+      {{input type="text" class="form-control" value=model.name}}
+    </div>
+
+
+
+  </div>
+  <div class="col-12 mb-5 mr-5 align-self-end  row justify-content-end">
+    {{#link-to 'quiz.question' class="btn btn-primary"}}
+    Quiz starten
+    {{/link-to}}
+  </div>
+</div>

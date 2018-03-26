@@ -1,0 +1,41 @@
+
+@import "ember-cli-bootstrap-4/functions";
+@import "custom";
+@import "ember-cli-bootstrap-4/bootstrap";
+
+
+body{
+  //background-color: #434343;
+}
+
+.vh-100 {
+  height: 100vh !important;
+}
+
+$round-button: 100px;
+
+
+.btn-rounded{
+  border-radius: 99999px;
+  height: $round-button;
+  width: $round-button;
+  vertical-align: middle;
+}
+
+
+@for $i from 1 through 10 {
+  .btn-rounded-#{$i} {
+    border-radius: 99999px;
+    height: $round-button + ($round-button * $i / 10);
+    width: $round-button + ($round-button * $i /10) ;
+    line-height: ($round-button + ($round-button * $i /10)  - (($round-button + ($round-button * $i /10))/7))  ;
+    vertical-align: middle;
+    font-size:  (($round-button + ($round-button * $i /10)) /3) ;
+
+  }
+}
+
+
+.progress.result{
+  height: 70px;
+}
