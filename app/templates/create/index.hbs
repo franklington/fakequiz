@@ -1,0 +1,22 @@
+{{outlet}}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Frage</th>
+      <th scope="col">Link</th>
+      <th scope="col">Antwort</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |question|}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{question.question}}</td>
+      <td>{{question.link}}</td>
+      <td>{{question.solution}}</td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>

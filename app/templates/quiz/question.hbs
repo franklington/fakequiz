@@ -12,22 +12,10 @@
   <div class="col-md-6 ">
 
 
-    <p class="text-center">
-      Hier steht eine Beispielfrage die es zu beantworten gilt?
+    {{#list-pagination paginateBy=1 items=model as |answers|}}
 
-    </p>
-    <div class="row mt-5 justify-content-between" >
-      <div class="col">
-        {{#link-to 'quiz.name' class="btn btn-primary btn-rounded-1"}}
-        10%
-        {{/link-to}}
-      </div>
-      <div class="col">
-        {{#link-to 'quiz.time' class="  btn btn-primary float-right btn-rounded-10"}}
-        75%
-        {{/link-to}}
-      </div>
-    </div>
+    {{/list-pagination}}
+    
 
 
 

@@ -1,0 +1,34 @@
+{{yield paginatedItems}}
+
+
+    {{#each paginatedItems as |answer|}}
+    {{page}}/{{numberOfPages}}
+    <p class="text-center">
+      {{answer.question.question}}
+    </p>
+    <div class="row mt-5 justify-content-between" >
+      <div class="col">
+        <button type="button" name="button" class="btn btn-danger btn-rounded-{{answer.falseButtonSize}}" {{action "nextClicked" false}}>{{answer.falseButton}}</button>
+
+      </div>
+      <div class="col">
+        <button type="button" name="button" class="btn btn-success btn-rounded-{{answer.trueButtonSize}}" {{action "nextClicked" true}}>{{answer.trueButton}}</button>
+
+
+      </div>
+    </div>
+    {{/each}}
+
+<!--<ul>
+  {{#if showPrevious}}
+    <li><button {{action "previousClicked"}}>{{previousText}}</button></li>
+  {{else}}
+    <li style="text-decoration: line-through;">{{previousText}}</li>
+  {{/if}}
+
+  {{#if showNext}}
+    <li><button {{action "nextClicked"}}>{{nextText}}</button></li>
+  {{else}}
+    <li style="text-decoration: line-through;">{{nextText}}</li>
+  {{/if}}
+</ul>-->

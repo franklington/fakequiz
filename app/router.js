@@ -7,13 +7,16 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('name');
   this.route('quiz', function() {
     this.route('question');
-    this.route('name');
     this.route('time');
     this.route('size');
     this.route('detail');
     this.route('mail');
+  });
+  this.route('create', function() {
+    this.route('question');
   });
 });
 
